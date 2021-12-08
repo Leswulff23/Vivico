@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+}
+
+footer {
+  background: #000;
+  padding: 5% 5%;
+}
+
+.foot {
+  display: flex;
+  font-family: inherit;
+  justify-content: space-between;
+}
+
+.foot h4{
+  font-size: 24px;
+}
+
+.foot h2{
+  font-size:36px;
+}
+
+.cat_p{
+  padding-top: 10px;
+}
+
+.location {
+  padding-top: 70px;
+} 
+
+.socials {
+    display: flex;
+    float:right;
+    width: 15%;
+    justify-content: space-evenly;
+}
+
+.cp-2021{
+  padding-top:60px;
+} 
+
+.copyright {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}

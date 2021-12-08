@@ -6,12 +6,12 @@ class Cart extends Connection{
 
     //Customer logged in: Add to cart
     function add_cart_lg($p_id, $c_id, $quantity){
-        return $this->query("insert into cart(p_id, ip_add, c_id, quantity) values ('$p_id', ' ', '$c_id','$quantity')");
+        return $this->query("insert into cart(p_id, ip_add, c_id, qty) values ('$p_id', ' ', '$c_id','$quantity')");
     }
 
     //Guest: Add to cart
     function add_cart_gst($p_id,$ip_add,$quantity){
-        return $this->query("insert into cart(p_id, ip_add, quantity) values ('$p_id','$ip_add','$quantity')");
+        return $this->query("insert into cart(p_id, ip_add, qty) values ('$p_id','$ip_add','$quantity')");
     } 
 
     //Customer logged in: Check duplicates in cart

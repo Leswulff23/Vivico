@@ -44,7 +44,6 @@
       include_once dirname( __FILE__ ).'/../controller/product_controller.php';
       $selected_food = select_a_product_controller( $_GET['productID'] );
       $Allproducts = select_all_products_controller();
-      $showReviews = select_order_reviews_controller( $_GET['productID'] );
 
       if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
 
@@ -84,7 +83,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_product['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -131,7 +130,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_product['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
@@ -167,7 +166,7 @@
                     <p><strong>Ingredients:</strong><br><?php echo $selected_food['product_desc'] ?></p>
                     <div class="sg-food-opt">
                         <p>&#8373;<?php echo $selected_food['product_price'] ?></p>
-                        <a href="./cart.php">Add to Cart</a>
+                        <a href="../actions/cart_process.php?cartID=<?php echo $selected_food['product_id'] ?> &qty=1">Add to Cart</a>
                         </button>
                     </div>
                     

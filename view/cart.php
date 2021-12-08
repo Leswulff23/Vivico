@@ -1,22 +1,3 @@
-<?php
-include_once dirname( __FILE__ ).'/../settings/core.php';
-include_once dirname( __FILE__ ).'/../controller/product_controller.php';
-
-
-if (isset($_SESSION['user_id'])) { //gets session of customer(logged in)
-    $user_id = $_SESSION['user_id'];  //user_id is now session
-    $product_cart = select_all_cart_lg_controller($user_id);
-    $cart_amount_lg = sum_cart_lg_controller($user_id);
-} else {
-    $ipAddress = getIpAddress();
-    $product_cart = select_all_cart_gst_controller($ipAddress);
-    $cart_amount_gst = sum_cart_gst_controller($ipAddress);
-}
-
-$Menu = select_all_products_controller();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,7 +111,7 @@ $Menu = select_all_products_controller();
                   </nav><!-- .navbar -->
                   <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-
+                      
                       <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     

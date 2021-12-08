@@ -58,7 +58,7 @@
               <header id="header" class="fixed-top d-flex align-items-cente">
                 <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-                  <h1 class="logo me-auto me-lg-0"><a href="index.html">Vivi & Co.</a></h1>
+                  <h1 class="logo me-auto me-lg-0"><a href="index.php">Vivi & Co.</a></h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -84,7 +84,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_food['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_product['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -131,7 +131,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_food['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_product['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>

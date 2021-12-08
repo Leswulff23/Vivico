@@ -46,49 +46,115 @@ if (isset($_SESSION['search_result'])) {
 
 </head>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-cente">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+  <?php 
+      include_once dirname( __FILE__ ).'/./settings/core.php';
+    
+      include_once dirname( __FILE__ ).'/../controller/product_controller.php';
+      $selected_food = select_a_product_controller( $_GET['productID'] );
+      $Allproducts = select_all_products_controller();
+      $showReviews = select_order_reviews_controller( $_GET['productID'] );
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Vivi & Co.</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
-          <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
-          <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-          <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
-          <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li>
-              <div class="search-area">
-                  <form method="" action="">
-                    <input class="search-txt" type="text" placeholder="Search Food..." />
-                    <button><img src="../assets/icons/bx_bx-search.svg" alt="" /></button>
-                  </form>
-              </div>
-            </li>
-          <li><a class="nav-link scrollto user-opt" href="./view/cart.html"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
-          <div class="cart">0</div>
+                      if ($_SESSION["user_role"] === '1') {
+                          header('location: ./Admin/Dashboard.php');
+                      } else {
+
+                          if ($_SESSION["user_role"] === '2') {
+          ?>
+            <!-- ======= Header ======= -->
+              <header id="header" class="fixed-top d-flex align-items-cente">
+                <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+                  <h1 class="logo me-auto me-lg-0"><a href="index.html">Vivi & Co.</a></h1>
+                  <!-- Uncomment below if you prefer to use an image logo -->
+                  <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                  <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                      <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
+                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
+                      
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                  </nav><!-- .navbar -->
+                  <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                      <li>
+                          <div class="search-area">
+                              <form method="" action="">
+                                <input class="search-txt" type="text" placeholder="Search Food..." />
+                                <button><img src="../assets/icons/bx_bx-search.svg" alt="" /></button>
+                              </form>
+                          </div>
+                        </li>
+                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
-          <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="../view/login.php">Login</a></li>
-              <li><a href="#">Account Settings</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header><!-- End Header -->
+                      <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                          <li><a href="#">Account Settings</a></li>
+                          <li><a href="../settings/logout.php">Logout</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </header><!-- End Header -->
+            <?php 
+                  }
+              } 
+            }else { /**--------------------------------GUEST------------------------------------------- */
+              ?>
+              <!-- ======= Header ======= -->
+              <header id="header" class="fixed-top d-flex align-items-cente">
+                <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+                  <h1 class="logo me-auto me-lg-0"><a href="index.html">Vivi & Co.</a></h1>
+                  <!-- Uncomment below if you prefer to use an image logo -->
+                  <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                  <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                      <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
+                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
+                      
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                  </nav><!-- .navbar -->
+                  <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                      <li>
+                          <div class="search-area">
+                              <form method="" action="">
+                                <input class="search-txt" type="text" placeholder="Search Food..." />
+                                <button><img src="../assets/icons/bx_bx-search.svg" alt="" /></button>
+                              </form>
+                          </div>
+                        </li>
+                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <div class="cart">0</div>
+                    
+                      <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                          <li><a href="./login.php">Login</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </header><!-- End Header -->
+        
+            <?php
+            }
+            ?>
 
 <body>
     <!-- ======= Menu Section ======= -->

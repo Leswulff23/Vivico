@@ -99,7 +99,7 @@ if ( isset( $_SESSION["user_id"] ) && ( $_SESSION["user_role"] ) )
                                 <a href="./Products.php">Return</a>
                             </div>
                             <div>
-                                <button id="add" type="submit" name="addCat">Add Product</button>
+                                <button id="add" type="submit" name="addCat">Add Category</button>
                             </div>         
                         </div>
                     </form> 

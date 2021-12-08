@@ -161,6 +161,7 @@ foreach ( $all_categories as $category ) {
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th>Title</th>
                       <th>Image</th>
                       <th>Category</th>
                       <th>Price</th>
@@ -174,6 +175,7 @@ foreach ( $all_products as $product ) {
     ?>
                     <tr>
                       <td>&#35;<?php echo $product['product_id']; ?></td>
+                      <td><?php echo $product['product_title']; ?></td>
                       <td>
                         <div class="fd-products-img"><img src="<?php echo $product['product_image'];?>" alt=""></div>
                       </td>

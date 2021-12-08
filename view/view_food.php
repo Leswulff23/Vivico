@@ -68,7 +68,7 @@
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
                     </ul>
@@ -84,7 +84,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_food['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -115,7 +115,7 @@
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
                     </ul>
@@ -131,7 +131,7 @@
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="../actions/cart_process.php?cartID=<?php echo $selected_food['product_id'] ?> &qty=1"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>

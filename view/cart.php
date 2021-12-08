@@ -2,11 +2,19 @@
 include_once dirname( __FILE__ ).'/../settings/core.php';
 include_once dirname( __FILE__ ).'/../controller/product_controller.php';
 
+
+if (isset($_SESSION['user_id'])) { //gets session of customer(logged in)
+    $user_id = $_SESSION['user_id'];  //user_id is now session
+    $product_cart = select_all_cart_lg_controller($user_id);
+    $cart_amount_lg = sum_cart_lg_controller($user_id);
+} else {
+    $ipAddress = getIpAddress();
+    $product_cart = select_all_cart_gst_controller($ipAddress);
+    $cart_amount_gst = sum_cart_gst_controller($ipAddress);
+}
+
 $Menu = select_all_products_controller();
 
-if ( isset( $_SESSION['search_result'] ) ) {
-    $search_results = $_SESSION['search_result'];
-}
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +83,7 @@ if ( isset( $_SESSION['search_result'] ) ) {
                       <li><a class="nav-link scrollto" href="#about">About</a></li>
                       <li><a class="nav-link scrollto" href="#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="#contact">Locate Us</a></li>
                       
                     </ul>
@@ -83,14 +91,6 @@ if ( isset( $_SESSION['search_result'] ) ) {
                   </nav><!-- .navbar -->
                   <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                      <li>
-                          <div class="search-area">
-                              <form method="" action="">
-                                <input class="search-txt" type="text" placeholder="Search Food..." />
-                                <button><img src="../assets/icons/bx_bx-search.svg" alt="" /></button>
-                              </form>
-                          </div>
-                        </li>
                       <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
@@ -122,7 +122,7 @@ if ( isset( $_SESSION['search_result'] ) ) {
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
                     </ul>
@@ -130,14 +130,7 @@ if ( isset( $_SESSION['search_result'] ) ) {
                   </nav><!-- .navbar -->
                   <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                      <li>
-                          <div class="search-area">
-                              <form method="" action="">
-                                <input class="search-txt" type="text" placeholder="Search Food..." />
-                                <button><img src="../assets/icons/bx_bx-search.svg" alt="" /></button>
-                              </form>
-                          </div>
-                        </li>
+
                       <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     

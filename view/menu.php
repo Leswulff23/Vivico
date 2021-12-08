@@ -76,7 +76,7 @@ if (isset($_SESSION['search_result'])) {
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
                     </ul>
@@ -123,7 +123,7 @@ if (isset($_SESSION['search_result'])) {
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
-                      <li><a class="nav-link scrollto active" href="./view/menu.php">Menu</a></li>
+                      <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
                     </ul>

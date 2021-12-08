@@ -14,7 +14,7 @@ if (isset($_POST['addCat'])) {
         //add new category
         $addCat = add_category_controller($cat_name);
         if ($addCat) {
-            echo "<script type='text/javascript'> alert('Successfully added category');
+            echo "<script type='text/javascript'>
             window.location.href = '../Admin/Add_category.php';
             </script>";
         } else {

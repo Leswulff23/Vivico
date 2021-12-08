@@ -15,7 +15,7 @@ if ( isset( $_POST['addProduct'] ) ){
     }
     else
     {$target_dir = "../assets/images/eateries/vivieats/";
-        $target_file = $target_dir.basename( $_FILES["prod_image"]["name"] );
+        $target_file = $target_dir . basename( $_FILES["prod_image"]["name"] );
         $imgFileType = strtolower( pathinfo( $target_file, PATHINFO_EXTENSION ) );
 
         if ( empty( $_FILES["prod_image"]["name"] ) )
@@ -38,7 +38,7 @@ if ( isset( $_POST['addProduct'] ) ){
             {
                 $addProduct = add_product_controller( $product_cat,$product_title, $product_price, $product_desc,$target_file, $product_key, $product_qty);
                 if ( $addProduct == true )
-                {echo "<script type='text/javascript'> alert('Successfully added Product');
+                {echo "<script type='text/javascript'>
                     window.location.href = '../Admin/Products.php';
                     </script>";
                 }

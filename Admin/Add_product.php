@@ -117,7 +117,7 @@ foreach ( $Allcategory as $x )
                             <small>Error</small>
                         </div>
                         <div class="form-element">
-                            <label for="">Enter Product Description</label>
+                            <label for="">Enter Product Ingredients</label>
                             <textarea name="productDesc" id="description"></textarea>
                             <small>Error</small>
                         </div>

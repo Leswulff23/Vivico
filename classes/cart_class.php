@@ -66,40 +66,39 @@ class Cart extends Connection{
 
     //Customer logged in: Select all items in cart
     function select_all_cart_lg($c_id){
-        return $this->fetch("select products.product_id, products.product_title, products.product_price, products.product_image, cart.p_id, cart.c_id, cart.quantity from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id'");
+        return $this->fetch("select products.product_id, products.product_title, products.product_price, products.product_image, cart.p_id, cart.c_id, cart.qty from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id'");
     }
 
     //Guest: Select all items in cart
     function select_all_cart_gst($ip_add){
-        return $this->fetch("select products.product_id, products.product_cat, products.product_brand, products.product_title, products.product_price, products.product_desc, products.product_image, cart.p_id, cart.ip_add, cart.quantity from cart join products on (products.product_id = cart.p_id) where cart.ip_add = '$ip_add'");
+        return $this->fetch("select products.product_id, products.product_cat, products.product_title, products.product_price, products.product_desc, products.product_image, cart.p_id, cart.ip_add, cart.qty from cart join products on (products.product_id = cart.p_id) where cart.ip_add = '$ip_add'");
     }
 
     //Customer logged in: Sum of cart
     function sum_amount_lg($c_id){
-        return $this->fetchOne("select sum(products.product_price * cart.quantity) as result from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id'");
+        return $this->fetchOne("select sum(products.product_price * cart.qty) as result from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id'");
     }
 
     //Guest: Sum of cart
     function sum_amount_gst($ip_address){
-        return $this->fetchOne("select sum(products.product_price * cart.quantity) as result from cart join products on (products.product_id = cart.p_id) where cart.ip_add = '$ip_address'");
+        return $this->fetchOne("select sum(products.product_price * cart.qty) as result from cart join products on (products.product_id = cart.p_id) where cart.ip_add = '$ip_address'");
     }
 
     //Get stock of products
     function get_stock($product_id){
-        return $this->fetchOne("select stock from products where product_id = '$product_id'");
+        return $this->fetchOne("select product_qty from products where product_id = '$product_id'");
     }
 
     //update stock
     function update_stock($stock,$product_id){
-        return $this->query("update products set stock='$stock' where product_id='$product_id'");
+        return $this->query("update products set product_qty='$stock' where product_id='$product_id'");
     }
 
 
     //Customer logged in: Checkout Total 
     function total_checkout_lg($c_id){
-        $fixedDeliveryCost= 0.01;
-        $fixedAdditionalServices = 0.01;
-        return $this->fetchOne("select round(sum(products.product_price * cart.quantity) + ('$fixedDeliveryCost') + ('$fixedAdditionalServices'),2) as total from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id' ");
+
+        return $this->fetchOne("select sum(products.product_price * cart.qty) as total from cart join products on (products.product_id = cart.p_id) where cart.c_id = '$c_id' ");
     }
 
     //Clear cart

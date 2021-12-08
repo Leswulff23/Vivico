@@ -52,7 +52,6 @@ if (isset($_SESSION['search_result'])) {
       include_once dirname( __FILE__ ).'/../controller/product_controller.php';
       $selected_food = select_a_product_controller( $_GET['productID'] );
       $Allproducts = select_all_products_controller();
-      $showReviews = select_order_reviews_controller( $_GET['productID'] );
 
       if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
 
@@ -92,7 +91,7 @@ if (isset($_SESSION['search_result'])) {
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -139,7 +138,7 @@ if (isset($_SESSION['search_result'])) {
                               </form>
                           </div>
                         </li>
-                      <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart">0</div>
                     
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>

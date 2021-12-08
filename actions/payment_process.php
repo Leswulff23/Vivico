@@ -1,5 +1,5 @@
 <?php
-include_once (dirname(__FILE__)) . '/../Settings/core.php';
+include_once (dirname(__FILE__)) . '/../settings/core.php';
 include_once (dirname(__FILE__)) . '/../controller/cart_controller.php';
 
 $reference = $_GET['reference'];

@@ -36,7 +36,7 @@
 <body>
 
       <?php 
-      include_once dirname( __FILE__ ).'/./Settings/core.php';
+      include_once dirname( __FILE__ ).'/./settings/core.php';
 
       if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
 

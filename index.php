@@ -67,7 +67,6 @@
                       <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="#about">About</a></li>
                       <li><a class="nav-link scrollto" href="#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto" href="./view/menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="#contact">Locate Us</a></li>
                       
@@ -86,7 +85,7 @@
                         </li>
                       <li><a class="nav-link scrollto user-opt" href="./view/cart.php"><img src="./assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
                       <div class="cart"><?php echo $cart_count['count'] ?></div>
-                      
+
                       <li class="dropdown"><a href="#"> <img src="./assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                           <li><a href="#">Account Settings</a></li>
@@ -116,7 +115,6 @@
                       <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="#about">About</a></li>
                       <li><a class="nav-link scrollto" href="#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto" href="./view/menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="#contact">Locate Us</a></li>
                       

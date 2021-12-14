@@ -3,12 +3,12 @@ include_once (dirname(__FILE__)) . '/../settings/core.php';
 include_once (dirname(__FILE__)) . '/../controller/product_controller.php';
 include_once (dirname(__FILE__)) . '/../controller/cart_controller.php';
 
-  if (isset($_SESSION['user_id'])) {
-$cart_count = count_cart_lg_controller($_SESSION['user_id']);
-} else {
-$ip_Address = getIpAddress();
-$cart_count = count_cart_gst_controller($ip_Address);
-}
+        if (isset($_SESSION['user_id'])) {
+      $cart_count = count_cart_lg_controller($_SESSION['user_id']);
+  } else {
+      $ip_Address = getIpAddress();
+      $cart_count = count_cart_gst_controller($ip_Address);
+  }
 
 $Menu = select_all_products_controller();
 
@@ -79,7 +79,6 @@ if (isset($_SESSION['search_result'])) {
                       <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
@@ -127,7 +126,6 @@ if (isset($_SESSION['search_result'])) {
                       <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto active" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       

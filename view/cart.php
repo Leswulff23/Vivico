@@ -74,7 +74,6 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
                       <li><a class="nav-link scrollto " href="../index.php#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       
@@ -253,7 +252,6 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
                       <li><a class="nav-link scrollto" href="../index.php#hero">Home</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#about">About</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#events">Events</a></li>
-                      <li><a class="nav-link scrollto" href="../index.php#testimonials">Testimonials</a></li>
                       <li><a class="nav-link scrollto" href="./menu.php">Menu</a></li>
                       <li><a class="nav-link scrollto" href="../index.php#contact">Locate Us</a></li>
                       

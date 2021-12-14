@@ -26,12 +26,12 @@ class Cart extends Connection{
 
     //Customer logged in: Updates cart
     function update_cart_lg($qty,$p_id, $c_id){
-        return $this->query("update cart set quantity='$qty' where p_id='$p_id' and c_id='$c_id'");
+        return $this->query("update cart set qty='$qty' where p_id='$p_id' and c_id='$c_id'");
     }
 
     //Guest: Updates cart
     function update_cart_gst($qty,$p_id,$ip_add ){
-        return $this->query("update cart set quantity='$qty' where p_id='$p_id' and ip_add='$ip_add'");
+        return $this->query("update cart set qty='$qty' where p_id='$p_id' and ip_add='$ip_add'");
     }
 
     //Customer logged in: Delete from cart

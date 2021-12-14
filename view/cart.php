@@ -309,7 +309,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
             </div>
           </div>
           <div class="cart-close">
-            <a href="<?php echo "../actions/remove_from_cart.php?p_id=" . $food['p_id']; ?>"><img src="../assets/icons/ant-design_close-square-filled.svg" alt=""></a>
+            <a href="../actions/remove_from_cart.php?p_id=<?php echo $food['p_id'] ?>"><img src="../assets/icons/ant-design_close-square-filled.svg" alt=""></a>
           </div>
         </div>
       </div>

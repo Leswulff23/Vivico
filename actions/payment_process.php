@@ -1,6 +1,6 @@
 <?php
 include_once (dirname(__FILE__)) . '/../settings/core.php';
-include_once (dirname(__FILE__)) . '/../controller/cart_controller.php';
+include_once (dirname(__FILE__)) . '/../controller/payment_controller.php';
 
 $reference = $_GET['reference'];
 
@@ -83,5 +83,5 @@ if (isset($decodedResponse->data->status) && $decodedResponse->data->status == '
         echo "Order not Added";
     }
 } else {
-    echo "<script>window.location.href(../View/paymentFailed.php);</script>";
+    echo "<script>alert('Error');</script>";
 }

@@ -2,6 +2,13 @@
 include_once (dirname(__FILE__)) . '/../settings/core.php';
 include_once (dirname(__FILE__)) . '/../controller/cart_controller.php';
 
+        if (isset($_SESSION['user_id'])) {
+      $cart_count = count_cart_lg_controller($_SESSION['user_id']);
+  } else {
+      $ip_Address = getIpAddress();
+      $cart_count = count_cart_gst_controller($ip_Address);
+  }
+
 if (isset($_SESSION['user_id'])) { //gets session of customer(logged in)
     $user_id = $_SESSION['user_id'];  //user_id is now session
     $food_cart = select_all_cart_lg_controller($user_id);
@@ -78,6 +85,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
                     <ul>
   
                       <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
+                      <div class="cart"><?php echo $cart_count['count'] ?></div>
         
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -256,7 +264,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
                     <ul>
             
                       <li><a class="nav-link scrollto user-opt" href="./cart.php"><img src="../assets/icons/ion_cart-outline.svg" alt="Cart" /></a></li>
-                      <div class="cart">0</div>
+                      <div class="cart"><?php echo $cart_count['count'] ?></div>
                     
                       <li class="dropdown"><a href="#"> <img src="../assets/icons/bx_bx-user.svg" alt="User" /> <i class="bi bi-chevron-down"></i></a>
                         <ul>

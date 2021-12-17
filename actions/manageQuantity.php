@@ -83,7 +83,6 @@ if (isset($_SESSION['user_id'])) {
         foreach ($cartItem as $item) {
             $oldQty = $item['qty'];
             $newQty = $oldQty + 1;
-            echo $newQty. 'The quantity from the cart';
             if (($stock_count['product_qty']) >= 0) {
                 $remain_stock = $stock_count['product_qty'] - $newQty;
                 if ($remain_stock < 0) {

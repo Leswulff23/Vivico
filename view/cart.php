@@ -155,6 +155,14 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
               <p>&#8373;<?php echo $cart_amount_lg['result'] ?></p>  
             </div>
           </div>
+                <div class="cart-details">
+            <div>
+              <p>Delivery Fee:</p>  
+            </div>
+            <div>
+              <p>&#8373;10</p>  
+            </div>
+          </div>
           
           <hr>
           <div class="cart-details total">
@@ -162,7 +170,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
               <h4>Total:</h4>  
             </div>
             <div>
-              <h2>&#8373;<?php echo $total_checkout['total']?></h2>  
+              <h2>&#8373;<?php echo $total_checkout['total'] +10?></h2>  
             </div>
           </div>
           <div class="cart-btns">
@@ -347,7 +355,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
               <h4>Total:</h4>  
             </div>
             <div>
-              <h2>&#8373;<?php echo $cart_amount_gst['result'] ?></h2>  
+              <h2>&#8373;<?php echo $cart_amount_gst['result']+10 ?></h2>  
             </div>
           </div>
           <div class="cart-btns">

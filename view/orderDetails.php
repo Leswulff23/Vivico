@@ -56,7 +56,7 @@ if (isset($_SESSION["user_id"]) && ($_SESSION["user_role"])) {
                                 <a href="./cart.php">Return</a>
                             </div>
                             <div>
-                                <button id="pay" type="button" value="<?php echo $total_checkout['total']?>" onclick="payWithPaystack()">Pay&#8373;<?php echo $total_checkout['total']?></button>
+                                <button id="pay" type="button" value="<?php echo $total_checkout['total'] +10?>" onclick="payWithPaystack()">Pay&#8373;<?php echo $total_checkout['total']?></button>
                             </div>         
                         </div>
                     </form> 

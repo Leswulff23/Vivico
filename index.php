@@ -157,8 +157,8 @@
                   <h2>Vivi & Co</h2>
 
                   <div class="btns">
-                    <a href="./view/menu.html" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-                    <a href="#" class="btn-book animated fadeInUp scrollto">View More</a>
+                    <a href="./view/menu.php" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+                    <a href="#events" class="btn-book animated fadeInUp scrollto">View Event</a>
                   </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
@@ -186,9 +186,9 @@
                     <p>
                       Vivi & Co is an umbrella company for Vivi Eats and Sokolata Gh. Vivi Eats is a food delivery service that deals primarily 
                       in popular Ghanaian local dishes such as Banku, Waakye and Angwamo. 
-                      Their vision is to provide the best local dishes to Ghanaians and Non Ghanaians in Ghana.
-                      One thing they can boast of as an organization is their consistency in their food’s taste and 
-                      their excellent customer service. They currently operate in Accra and have organized a few pop ups in Kumasi.
+                      Our vision is to provide the best local dishes to Ghanaians and Non Ghanaians in Ghana.
+                      One thing we can boast of as an organization is our consistency in our food’s taste and 
+                      our excellent customer service. We currently operate in Accra and have organized a few pop ups in Kumasi.
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@
                     <h4>Help</h4>
                     <ul>
                       <li><i class="bx bx-chevron-right"></i> <a href="#">Help Center</a></li>
-                      <li><i class="bx bx-chevron-right"></i> <a href="#">Contact 00000000000</a></li>
+                      <li><i class="bx bx-chevron-right"></i> <a href="#">Contact 0546513924</a></li>
                       <li><i class="bx bx-chevron-right"></i> <a href="#">Delivery Service</a></li>
                     </ul>
                   </div>
@@ -365,8 +365,6 @@
                     <h4>Company Information</h4>
                     <ul>
                       <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
-                      <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                      <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
                     </ul>
                   </div>
                 </div>
